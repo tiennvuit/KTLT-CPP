@@ -1,4 +1,4 @@
-# Some basic exercise for practice in propgramming `C/C++`.
+# Some basic exercises for practice in propgramming `C/C++`.
 
 ### The goal of project is share with you some technique programming excercises. This document is suitable for those who are new to programming. 
 
@@ -39,7 +39,6 @@
 ### Chapter 09. Pointers
 - Objectives:
 - List exercies:
-------
 ------
 
 
