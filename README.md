@@ -1,24 +1,29 @@
 # Some basic exercise for practice in propgramming.
 
-## Chapter 01. Flow chart
+------
+## The contents:
+### Chapter 01. Flow chart
 
 
-## Chapter 02. Function
+### Chapter 02. Function
 
 
-## Chapter 03. Array
+### Chapter 03. Array
 
 
-## Chapter 04. Matrix
+### Chapter 04. Matrix
 
 
-## Chapter 05. Square matrix
+### Chapter 05. Square matrix
 
 
-## Chapter 06. Recursion
+### Chapter 06. Recursion
 
 
-## Chapter 07. Struct
+### Chapter 07. Struct
 
 
-## Chapter 08. Pointer
+### Chapter 08. Pointer
+
+------
+------
