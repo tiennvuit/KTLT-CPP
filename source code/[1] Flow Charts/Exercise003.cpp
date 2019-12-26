@@ -9,8 +9,8 @@ int main()
     cout << "Enter the radius of circle: ";
     cin >> r;
 
-    float S = pi * r * r;
+    float P = 2 * pi * r;
 
-    cout << "The area of this circle: " << S;
+    cout << "The perimeter of circle is " << P;
     return 0;
 }
