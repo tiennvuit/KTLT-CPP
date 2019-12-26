@@ -5,14 +5,14 @@ using namespace std;
 int main()
 {
 	float x1, y1, x2, y2;
-	cout << "Nhap toa to diem thu nhat: ";
+	cout << "Enter the first point: ";
 	cin >> x1 >> y1;
-	cout << "\nNhap toa do diem thu hai: ";
+	cout << "\nEnter the second point: ";
 	cin >> x2 >> y2;
 
 	float d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
-	cout << "\nKhoang cach hai diem vua nhap: " << d << endl;
+	cout << "\nDistance between two points: " << d << endl;
 
 	return 0;
 }
