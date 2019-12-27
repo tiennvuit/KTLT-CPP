@@ -3,29 +3,23 @@ using namespace std;
 
 int main()
 {
-    int k, n;
+    int n;
 
-    cout << "Enter the integer number k: ";
-    cin >> k;
-    cout << "Enter the integer number n: ";
+    cout << "Enter the positive integer n: ";
     cin >> n;
 
-    int S = 0;
+    float S = 0;
+    int denominator = 0;
     int i = 1;
     while (i <= n)
     {
-        int T = 1;
-        int j = 1;
-        while (j <= k)
-        {
-            T = T * i;
-            j = j + 1;
-        }
-        S = S + T;
+        denominator = denominator + i;
+        S = S + (float)1 / denominator;
         i = i + 1;
     }
+    S = n / S;
 
-    cout << "Sum is " << S;
+    cout << "The sum is " << S;
 
     return 0;
 }

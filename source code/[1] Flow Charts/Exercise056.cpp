@@ -12,14 +12,14 @@ int main()
     int i = 1;
     while (i <= n)
     {
-        if (n % i == 0 and i % 2 != 0)
+        if (n % i == 0 and i % 2 == 0)
         {
             count = count + 1;
         }
         i = i + 1;
     }
 
-    cout << "The number of odd divisors is " << count;
+    cout << "The number of even divisors is " << count;
 
     return 0;
 }
