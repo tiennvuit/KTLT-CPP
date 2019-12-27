@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main()
@@ -9,14 +8,18 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    float S = 0;
-    int i = 2;
+    int count = 0;
+    int i = 1;
     while (i <= n)
     {
-        S = S + sqrt(1 + (float)1 / (i * i) + (float)1 / ((i + 1) * (i + 1)));
+        if (n % i == 0 and i % 2 != 0)
+        {
+            count = count + 1;
+        }
         i = i + 1;
     }
 
-    cout << "The sum is " << S;
+    cout << "The number of odd divisors is " << count;
+
     return 0;
 }
