@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -9,17 +10,15 @@ int main()
     cin >> n;
 
     float S = 0;
-    int denominator = 0;
+    int T = 1;
     int i = 1;
     while (i <= n)
     {
-        denominator = denominator + i;
-        S = S + (float)1 / denominator;
+        T = T * i;
+        S = pow(S + T, (float)1 / (i + 1));
         i = i + 1;
     }
-    S = n / S;
 
     cout << "The sum is " << S;
-
     return 0;
 }

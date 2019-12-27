@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -9,17 +10,13 @@ int main()
     cin >> n;
 
     float S = 0;
-    int denominator = 0;
-    int i = 1;
-    while (i <= n)
+    int i = n;
+    while (i >= 1)
     {
-        denominator = denominator + i;
-        S = S + (float)1 / denominator;
-        i = i + 1;
+        S = sqrt(S + i);
+        i = i - 1;
     }
-    S = n / S;
 
     cout << "The sum is " << S;
-
     return 0;
 }
