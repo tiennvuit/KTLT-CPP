@@ -9,11 +9,12 @@ int main()
 	cin >> n;
 
 	int flag = 0;
-
-	for (int i = 0; i <= n; i++)
+	int i = 0;
+	while(i <= n)
 	{
 		if (i * i == n)
 			flag = 1;
+		i = i + 1;
 	}
 
 	if (flag == 0)

@@ -11,7 +11,8 @@ int main()
     cin >> y;
 
     cout <<"The leap years belong to [" << x << ", " << y << "]\n";
-    for(int i = x ; i<=y; i++)
+    int i = x;
+    while(i <= y)
     {
         int flag = 0;
         if(i % 4 == 0 && i % 100 != 0)
@@ -21,6 +22,7 @@ int main()
 
         if(flag == 1)
             cout << i << endl;
+        i = i + 1;
     }
 
     return 0;

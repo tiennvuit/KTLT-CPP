@@ -8,7 +8,6 @@ int main()
     cout << "Enter the value n: ";
     cin >> n;
 
-    int pre_previous = -1;
     int previous = -1;
     int current = 3;
     int T2 = 2;
@@ -16,11 +15,9 @@ int main()
     while (i <= n)
     {
         T2 = T2 * 2;
-        int temp1 = previous;
-        int temp2 = current;
-        current = 5 * T2 + 5 * current - 5 * previous;
-        
-
+        int temp = current;
+        current = 5 * T2 + 5 * current - previous;
+        previous = temp;
         i = i + 1;
     }
 

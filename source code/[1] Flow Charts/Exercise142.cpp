@@ -9,11 +9,12 @@ int main()
 	cin >> n;
 
 	int count = 0;
-
-	for (int i = 1; i <= n; i++)
+	int i = 1;
+	while(i <= n)
 	{
 		if (n % i == 0)
 			count = count + 1;
+		i = i + 1;
 	}
 
 	if (count == 2)
@@ -22,5 +23,4 @@ int main()
 		cout << "No. It is not a prime number";
 
 	return 0;
-
 }

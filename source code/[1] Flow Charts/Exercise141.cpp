@@ -9,10 +9,12 @@ int main()
 	cin >> n;
 
 	int S = 0;
-	for (int i = 1; i < n; i++)
+	int i = 1;
+	while(i < n)
 	{
 		if (n % i == 0)
 			S = S + i;
+		i = i + 1;
 	}
 
 	if (S == n)
