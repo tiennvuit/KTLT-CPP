@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout << "Enter the positive integer n: ";
+    cin >> n;
+
+    float S = 0;
+    int denominator = 0;
+    int sign = 1;
+    int i = 1;
+    while (i <= n)
+    {
+        denominator = denominator + i;
+        S = S + (float)sign / denominator;
+        sign = -sign;
+        i = i + 1;
+    }
+
+    cout << "The sum is " << S;
+    return 0;
+}

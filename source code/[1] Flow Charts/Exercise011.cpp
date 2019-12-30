@@ -18,9 +18,9 @@ int main()
     float db = sqrt((xA - xC) * (xA - xC) + (yA - yC) * (yA - yC));
     float dc = sqrt((xA - xB) * (xA - xB) + (yA - yB) * (yA - yB));
 
-    float P = da + db + dc;
+    float p = (da + db + dc)/2;
     // Using formula Heron:
-    float S = sqrt(P * (P - da) * (P - db) * (P - dc));
+    float S = sqrt(p * (p - da) * (p - db) * (p - dc));
 
     cout <<"The area of the triangle is " << S;
     
