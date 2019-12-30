@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int check_exist_even(int);
+
 int main()
 {
     int n;
@@ -8,21 +10,27 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    int m = n;
-    int flag = 0;
-    while (m != 0)
-    {
-        int dv = m % 10;
-        if (dv % 2 == 0)
-        {
-            flag = 1;
-        }
-        m = m / 10;
-    }
-    if (flag == 0)
+    int result = check_exist_even(n);
+
+    if (result == 0)
         cout << "There are no even digits !";
     else
         cout << "Even even digits exist !!";
 
     return 0;
+}
+
+int check_exist_even(int n)
+{
+    int flag = 0;
+    while (n != 0)
+    {
+        int dv = n % 10;
+        if (dv % 2 == 0)
+        {
+            flag = 1;
+        }
+        n = n / 10;
+    }
+    return flag;
 }

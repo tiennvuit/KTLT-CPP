@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int count_divisors(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = count_divisors(n);
+
+    cout << "The number of divisors is " << result;
+
+    return 0;
+}
+
+int count_divisors(int n)
+{
     int count = 0;
     int i = 1;
     while (i <= n)
@@ -18,8 +29,5 @@ int main()
         }
         i = i + 1;
     }
-
-    cout << "The number of divisors is " << count;
-
-    return 0;
+    return count;
 }

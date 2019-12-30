@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int count_digits(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = count_digits(n);
+
+    cout << "The number of digits is " << result;
+
+    return 0;
+}
+
+int count_digits(int n)
+{
     int count = 0;
     int m = n;
     while (m != 0)
@@ -15,8 +26,5 @@ int main()
         count = count + 1;
         m = m / 10;
     }
-
-    cout << "The number of digits is " << count;
-
-    return 0;
+    return count;
 }
