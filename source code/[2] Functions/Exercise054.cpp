@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int sum_even_divisors(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = sum_even_divisors(n);
+
+    cout << "Sum all even divisors is " << result;
+
+    return 0;
+}
+
+int sum_even_divisors(int n)
+{
     int S = 0;
     int i = 1;
     while (i <= n)
@@ -18,8 +29,5 @@ int main()
         }
         i = i + 1;
     }
-
-    cout << "Sum all even divisors is " << S;
-
-    return 0;
+    return S;
 }

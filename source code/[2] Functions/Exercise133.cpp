@@ -2,6 +2,8 @@
 #include <cmath>
 using namespace std;
 
+int type_of_triangle(float, float, float);
+
 int main()
 {
     float x, y, z;
@@ -9,25 +11,8 @@ int main()
     cout << "Enter three magnitute edges of triagnle: ";
     cin >> x >> y >> z;
 
-    int flag = 1;
-    if (x == y || x == z || y == z)
-    {
-        if (x == y && y == z)
-            flag = 2;
-        if (x * x == y * y + z * z || y * y == x * x + z * z || z * z == x * x + y * y)
-            flag = 3;
-        flag = 4;
-    }
-    else if (x * x == y * y + z * z || y * y == x * x + z * z || z * z == x * x + y * y)
-    {
-        flag = 5;
-    }
-    else if (!(abs(y - z) < x && x < y + z))
-    {
-        flag = 0;
-    }
-
-    switch (flag)
+    int result = type_of_triangle(x, y, z);
+    switch (result)
     {
     case 0:
         cout << "Not a triangle !";
@@ -50,4 +35,26 @@ int main()
     }
 
     return 0;
+}
+
+int type_of_triangle(float x, float y, float z)
+{
+    int flag = 1;
+    if (x == y || x == z || y == z)
+    {
+        if (x == y && y == z)
+            flag = 2;
+        if (x * x == y * y + z * z || y * y == x * x + z * z || z * z == x * x + y * y)
+            flag = 3;
+        flag = 4;
+    }
+    else if (x * x == y * y + z * z || y * y == x * x + z * z || z * z == x * x + y * y)
+    {
+        flag = 5;
+    }
+    else if (!(abs(y - z) < x && x < y + z))
+    {
+        flag = 0;
+    }
+    return flag;
 }

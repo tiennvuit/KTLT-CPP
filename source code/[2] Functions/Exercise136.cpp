@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int check_leap_year(int);
+
 int main()
 {
     int x, y;
@@ -10,20 +12,25 @@ int main()
     cout << "Enter the start year: ";
     cin >> y;
 
-    cout <<"The leap years belong to [" << x << ", " << y << "]\n";
+    cout << "The leap years belong to [" << x << ", " << y << "]\n";
     int i = x;
-    while(i <= y)
+    while (i <= y)
     {
-        int flag = 0;
-        if(i % 4 == 0 && i % 100 != 0)
-            flag = 1;
-        if(i % 400 == 0)
-            flag = 1;
-
-        if(flag == 1)
+        int result = check_leap_year(i);
+        if (result == 0)
             cout << i << endl;
         i = i + 1;
     }
 
     return 0;
+}
+
+int check_leap_year(int n)
+{
+    int flag = 0;
+    if (n % 4 == 0 && n % 100 != 0)
+        flag = 1;
+    if (n % 400 == 0)
+        flag = 1;
+    return flag;
 }

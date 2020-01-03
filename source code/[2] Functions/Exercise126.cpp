@@ -1,17 +1,24 @@
 #include <iostream>
 using namespace std;
 
+float find_max(float, float);
+
 int main()
 {
-    float a, b;
+	float a, b;
 
-    cout << "Enter two values a, b: ";
-    cin >> a >> b;
+	cout << "Enter two values a, b: ";
+	cin >> a >> b;
+	
+	float result = find_max(a, b);
 
-    float max = a;
-    if (b > max)
-        max = b;
+	cout << "The max value is " << result;
+	return 0;
+}
 
-    cout << "The max value is " << max;
-    return 0;
+float find_max(float a, float b)
+{
+	if (a > b)
+		return a;
+	return b;
 }

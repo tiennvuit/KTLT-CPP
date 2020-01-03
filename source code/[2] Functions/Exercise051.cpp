@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int product_divisors(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = product_divisors(n);
+
+    cout << "Product all divisors is " << result;
+
+    return 0;
+}
+
+int product_divisors(int n)
+{
     int T = 1;
     int i = 1;
     while (i <= n)
@@ -18,8 +29,5 @@ int main()
         }
         i = i + 1;
     }
-
-    cout << "Product all divisors is " << T;
-
-    return 0;
+    return T;
 }

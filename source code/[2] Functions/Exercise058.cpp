@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int sum_digits(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = sum_digits(n);
+
+    cout << "Sum all digits is " << result;
+
+    return 0;
+}
+
+int sum_digits(int n)
+{
     int S = 0;
     int m = n;
     while (m != 0)
@@ -16,8 +27,5 @@ int main()
         S = S + dv;
         m = m / 10;
     }
-
-    cout << "Sum all digits is " << S;
-
-    return 0;
+    return S;
 }

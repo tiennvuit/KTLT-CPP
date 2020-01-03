@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+float sum(float, int);
+
 int main()
 {
     float x;
@@ -11,6 +13,14 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    float result = sum(x, n);
+
+    cout << "The sum is " << result;
+    return 0;
+}
+
+float sum(float x, int n)
+{
     float S = -1;
     float numerator = 1;
     int denominator = 1;
@@ -24,7 +34,5 @@ int main()
         sign = -sign;
         i = i + 2;
     }
-
-    cout << "The sum is " << S;
-    return 0;
+    return S;
 }

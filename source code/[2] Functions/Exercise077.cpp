@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+float sum(int, int);
+
 int main()
 {
     int k, n;
@@ -10,6 +12,15 @@ int main()
     cout << "Enter the integer number n: ";
     cin >> n;
 
+    float result = sum(k, n);
+
+    cout << "Sum is " << result;
+
+    return 0;
+}
+
+float sum(int k, int n)
+{
     int S = 0;
     int i = 1;
     while (i <= n)
@@ -24,8 +35,5 @@ int main()
         S = S + T;
         i = i + 1;
     }
-
-    cout << "Sum is " << S;
-
-    return 0;
+    return S;
 }

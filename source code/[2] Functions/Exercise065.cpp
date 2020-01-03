@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int find_min_digit(int);
+
 int main()
 {
     int n;
@@ -8,19 +10,24 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    int m = n;
-    int lc = m % 10;
-    while (m != 0)
+    int result = find_min_digit(n);
+
+    cout << "The min digit is " << result;
+
+    return 0;
+}
+
+int find_min_digit(int n)
+{
+    int lc = n % 10;
+    while (n != 0)
     {
-        int dv = m % 10;
-        if(dv < lc)
+        int dv = n % 10;
+        if (dv < lc)
         {
             lc = dv;
         }
-        m = m / 10;
+        n = n / 10;
     }
-
-    cout << "The min digit is " << lc;
-
-    return 0;
+    return lc;
 }

@@ -3,6 +3,8 @@ using namespace std;
 
 #define pi 3.14159265359
 
+float calculate_cos(float);
+
 int main()
 {
     float x;
@@ -12,13 +14,20 @@ int main()
     // Convert degrees to radian
     x = x * pi / 180;
 
+    float result = calculate_cos(x);
+
+    cout << "The value cos(" << x << ") is " << result;
+    return 0;
+}
+
+float calculate_cos(float x)
+{
     float S = 1;
     float numerator = 1;
     int denominator = 1;
     int sign = -1;
     float accuracy = 1;
     int i = 2;
-    // Xem lại định nghĩa độ chính xác trong khai triển Taylor
     while (accuracy >= 10e-6)
     {
         numerator = numerator * x * x;
@@ -30,7 +39,5 @@ int main()
 
         i = i + 2;
     }
-
-    cout << "The value cos(" << x << ") is " << S;
-    return 0;
+    return S;
 }

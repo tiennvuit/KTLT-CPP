@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int find_k_min(int);
+
 int main()
 {
 	int n;
@@ -8,6 +10,15 @@ int main()
 	cout << "Enter positive integer n: ";
 	cin >> n;
 
+	int result = find_k_min(n);
+
+	cout << "The min value k is " << result;
+
+	return 0;
+}
+
+int find_k_min(int n)
+{
 	int S = 0;
 	int i = 0;
 	while (S < n)
@@ -15,8 +26,5 @@ int main()
 		S = S + i;
 		i = i + 1;
 	}
-
-	cout << "The max value k is " << i - 1;
-
-	return 0;
+	return i;
 }

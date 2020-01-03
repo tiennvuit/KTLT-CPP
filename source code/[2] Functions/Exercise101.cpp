@@ -1,21 +1,29 @@
 #include <iostream>
 using namespace std;
 
+float sum(float);
+
 int main()
 {
-    float S = 0;
-    float accuracy = 1;
-    int i = 1;
-    // Xem lại định nghĩa độ chính xác trong khai triển Taylor
-    while (accuracy >= 10e-6)
-    {
-        S = S + (float)1 / i;
-
-        accuracy = (float)1 / i;
-        
-        i = i + 1;
-    }
+    float accuracy = 10e-6;
+    float S = sum(accuracy);
 
     cout << "The sum is " << S;
     return 0;
+}
+
+float sum(float accuracy)
+{
+    float S = 0;
+    int i = 1;
+    float current_accuracy = 1;
+    while (current_accuracy > accuracy)
+    {
+        S = S + (float)1 / i;
+
+        current_accuracy = (float)1 / i;
+
+        i = i + 1;
+    }
+    return S;
 }

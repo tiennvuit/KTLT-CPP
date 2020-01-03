@@ -6,7 +6,7 @@ int main()
 {
     float x, y, z;
 
-    cout <<"Enter three magnitute edges of triagnle: ";
+    cout <<"Enter three magnitute edges of triangle: ";
     cin >> x >> y >> z;
 
     int flag = 1;

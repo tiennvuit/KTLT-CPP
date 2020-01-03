@@ -3,6 +3,8 @@ using namespace std;
 
 #define pi 3.14159265359
 
+float calculate_sin(float);
+
 int main()
 {
     float x;
@@ -12,13 +14,20 @@ int main()
     // Convert degrees to radian
     x = x * pi / 180;
 
+    float result = calculate_sin(x);
+
+    cout << "The value sin(" << x << ") is " << result;
+    return 0;
+}
+
+float calculate_sin(float x)
+{
     float S = x;
     float numerator = x;
     int denominator = 1;
     int sign = -1;
     float accuracy = 1;
     int i = 3;
-    // Xem lại định nghĩa độ chính xác trong khai triển Taylor
     while (accuracy >= 10e-6)
     {
         numerator = numerator * x * x;
@@ -30,7 +39,5 @@ int main()
 
         i = i + 2;
     }
-
-    cout << "The value sin(" << x << ") is " << S;
-    return 0;
+    return S;
 }

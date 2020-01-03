@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int calculate_nth(int);
+
 int main()
 {
     int n;
@@ -8,6 +10,15 @@ int main()
     cout << "Enter the value n: ";
     cin >> n;
 
+    int result = calculate_nth(n);
+
+    cout << "The value of " << n << "th term is " << result;
+
+    return 0;
+}
+
+int calculate_nth(int n)
+{
     int previous = -1;
     int current = 3;
     int T2 = 2;
@@ -20,8 +31,5 @@ int main()
         previous = temp;
         i = i + 1;
     }
-
-    cout << "The value of " << n << "th term is " << current;
-
-    return 0;
+    return current;
 }

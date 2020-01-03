@@ -2,6 +2,8 @@
 #include <iomanip>
 using namespace std;
 
+int product_odd_divisors(int);
+
 int main()
 {
     int n;
@@ -9,6 +11,15 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
+    int result = product_odd_divisors(n);
+
+    cout << "Product all odd divisors is " << result;
+
+    return 0;
+}
+
+int product_odd_divisors(int n)
+{
     int T = 1;
     int i = 1;
     while (i <= n)
@@ -19,8 +30,5 @@ int main()
         }
         i = i + 1;
     }
-
-    cout << "Product all odd divisors is " << T;
-
-    return 0;
+    return T;
 }
