@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    float x;
+    double x;
     int n;
 
     cout << "Enter the float value x: ";
@@ -11,7 +11,7 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    float T = x;
+    double T = x;
     int i = 1;
     while (i <= n)
     {
@@ -19,6 +19,6 @@ int main()
         i = i + 1;
     }
 
-    cout << "The product is " << T;
+    cout << "The product is " << fixed << T;
     return 0;
 }

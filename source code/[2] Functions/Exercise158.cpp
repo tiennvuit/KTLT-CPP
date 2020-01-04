@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+int find_max_digit(int);
+int count_max_digits(int);
+
 int main()
 {
 	int n;
@@ -8,29 +11,38 @@ int main()
 	cout << "Enter positive integer n: ";
 	cin >> n;
 
-	// Find the max digit of
-	int m = n;
-	int max_digit = m % 10;
-	while (m != 0)
-	{
-		int dv = m % 10;
-		if (max_digit < dv)
-			max_digit = dv;
-		m = m / 10;
-	}
+	int result = count_max_digits(n);
 
-	// Count number max digits
-	int count = 0;
-	m = n;
-	while (m != 0)
-	{
-		int dv = m % 10;
-		if (dv == max_digit)
-			count = count + 1;
-		m = m / 10;
-	}
-
-	cout << "The number of max digits is " << count;
+	cout << "The number of max digits is " << result;
 
 	return 0;
+}
+
+int find_max_digit(int n)
+{
+	int max_digit = n % 10;
+	while (n != 0)
+	{
+		int dv = n % 10;
+		if (max_digit < dv)
+			max_digit = dv;
+		n = n / 10;
+	}
+	return max_digit;
+}
+
+int count_max_digits(int n)
+{
+	if (n == 0)
+		return 1;
+	int count = 0;
+	int lc = find_max_digit(n);
+	while (n != 0)
+	{
+		int dv = n % 10;
+		if (dv == lc)
+			count = count + 1;
+		n = n / 10;
+	}
+	return count;
 }

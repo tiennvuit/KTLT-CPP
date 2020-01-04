@@ -8,7 +8,7 @@ int main()
     cout << "Enter the integer n: ";
     cin >> n;
 
-    int T = 1;
+    long long T = 1;
     int i = 1;
     while (i <= n)
     {

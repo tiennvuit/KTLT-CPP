@@ -11,7 +11,7 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    float T = 1;
+    double T = 1;
     int i = 1;
     while (i <= n)
     {
@@ -19,6 +19,6 @@ int main()
         i = i + 1;
     }
 
-    cout << "The product is " << T;
+    cout << "The product is " << fixed << T;
     return 0;
 }

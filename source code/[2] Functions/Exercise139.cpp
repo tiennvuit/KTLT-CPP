@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+void solve_equation(float, float);
+
 int main()
 {
 	float a, b;
@@ -8,6 +10,13 @@ int main()
 	cout << "Enter coefficients a, b: ";
 	cin >> a >> b;
 
+	solve_equation(a, b);
+
+	return 0;
+}
+
+void solve_equation(float a, float b)
+{
 	if (a == 0)
 		if (b == 0)
 			cout << "The equation have infinity solutions";
@@ -18,6 +27,4 @@ int main()
 		float x = -b / a;
 		cout << "The solutions of equation is " << x;
 	}
-
-	return 0;
 }

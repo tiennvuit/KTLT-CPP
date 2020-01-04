@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int find_GCD(int, int);
+
 int main()
 {
 	int a, b;
@@ -8,6 +10,15 @@ int main()
 	cout << "Enter two integer number a, b: ";
 	cin >> a >> b;
 
+	int result = find_GCD(a, b);
+
+	cout << "The greatest common divisor is " << result;
+
+	return 0;
+}
+
+int find_GCD(int a, int b)
+{
 	int m = abs(a);
 	int n = abs(b);
 
@@ -18,8 +29,5 @@ int main()
 		else
 			n = n - m;
 	}
-
-	cout << "The greatest common divisor is " << m + n;
-
-	return 0;
+	return m + n;
 }

@@ -8,7 +8,7 @@ int main()
     cout << "Enter the positive integer n: ";
     cin >> n;
 
-    float T = 1;
+    double T = 1;
     int i = 1;
     while (i <= n)
     {

@@ -3,16 +3,16 @@ using namespace std;
 
 int main()
 {
-    float x;
+    double x;
 
     cout << "Enter the value x: ";
     cin >> x;
 
-    float x2 = x * x;
-    float x4 = x2 * x2;
-    float x8 = x4 * x4;
-    float x16 = x8 * x8;
-    float x15 = x16 / x;
+    double x2 = x * x;
+    double x4 = x2 * x2;
+    double x8 = x4 * x4;
+    double x16 = x8 * x8;
+    double x15 = x16 / x;
 
     cout << "The result is " << fixed << x15;
 
